@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 import smtplib
+import os
 
 
 def sendNoto(name1, name2, phoneNum, emailAddress, message):
