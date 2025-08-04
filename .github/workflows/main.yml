@@ -20,4 +20,4 @@ jobs:
         env:
           EMAIL_FROM_SECRET: ${{ secrets.USER_EMAIL }}
           PASSWORD_FROM_SECRET: ${{ secrets.APP_PASSWORD }}
-        run: python your_script.py
+        run: python app.py
