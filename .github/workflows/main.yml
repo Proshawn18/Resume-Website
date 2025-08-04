@@ -1,0 +1,23 @@
+name: Python App Workflow
+
+on: [push] # Runs the workflow on every push to the repository
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Python script
+        # This is where you pass the GitHub secrets to the script's environment
+        env:
+          EMAIL_FROM_SECRET: ${{ secrets.USER_EMAIL }}
+          PASSWORD_FROM_SECRET: ${{ secrets.APP_PASSWORD }}
+        run: python your_script.py

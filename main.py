@@ -3,9 +3,9 @@ import smtplib
 
 
 def sendNoto(name1, name2, phoneNum, emailAddress, message):
-    sender_email = "EMAILL_ADDR"
+    sender_email = os.environ.get('EMAIL_FROM_SECRET')
     rec_email = "7089406109@tmomail.net"
-    password="PASSWORD"
+    password= os.environ.get('PASSWORD_FROM_SECRET')
     
     finalMessage = str("From: ")+ str(name1)+ str(" ")+ str(name2)+ str("\n")
     if phoneNum != "":
