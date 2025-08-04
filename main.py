@@ -5,7 +5,7 @@ import os
 
 def sendNoto(name1, name2, phoneNum, emailAddress, message):
     sender_email = os.environ.get('EMAIL_FROM_SECRET')
-    rec_email = "7089406109@tmomail.net"
+    rec_email = os.environ.get('MY_EMAIL_FROM_SECRET')
     password= os.environ.get('PASSWORD_FROM_SECRET')
     
     finalMessage = str("From: ")+ str(name1)+ str(" ")+ str(name2)+ str("\n")
