@@ -4,8 +4,8 @@ import os
 
 def sendNoto(first_name, last_name, phone_num, email_address, message_body):
     # Environment variables — make sure these are set in your deployment
-    sender_email    = os.environ.get('MY_EMAIL_FROM_SECRET')
-    recipient_email = os.environ.get('EMAIL_FROM_SECRET')
+    sender_email    = os.environ.get('EMAIL_FROM_SECRET')
+    recipient_email = os.environ.get('MY_EMAIL_FROM_SECRET')
     password        = os.environ.get('PASSWORD_FROM_SECRET')
     
     if not sender_email or not recipient_email or not password:
