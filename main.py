@@ -60,7 +60,7 @@ def handle_message():
 
     # You may want to validate these fields before sending
     sendNoto(first_name, last_name, phone_num, email_address, message_body)
-    return redirect('/')
+    return redirect('shawnscott.tech/resume')
 
 
 if __name__ == '__main__':
